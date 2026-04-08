@@ -1,0 +1,98 @@
+:root,
+[data-bs-theme=dark] {
+--bs-dark-rgb: 0, 0, 0;
+}
+
+/* 連結Google雲端字體，提供用戶一致體驗UX */
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
+
+html {font-size: 20px;}
+
+/* 統一每一個網頁的背景色 */
+body {font-family: "LXGW WenKai Mono TC", monospace; background: #fcfaf6;}
+
+/* 標題一級的文字大小 */
+h1 {font-size: 2rem;}
+
+/* 標題二級的文字設定，選取器是標籤，影響整體 */
+h2 {font-size: 1.8rem;font-weight: 800;color: rgb(98, 24, 2);}
+
+/* 選取器是類別，影響個別，需要手動套用 */
+.h2-custom-pink {font-size: 3rem;font-weight: 800;color: rgb(58, 51, 55);}
+
+/* 重要文字標註 */
+.text-pink {color: rgb(255, 01, 195)}
+
+/* 駝峰式命名、與其它css衝突 */
+/* 與其它css衝突，無法套用文字大小時，可強制優先套用目前樣式 */
+.iconsTitle {
+    font: size 1rem !important;
+    color: rgb(93, 78, 80);
+    vertical-align:textbottom;
+}
+
+/* 旅遊安全頁面的標題四級文字大小 */
+.h4-FontSize {font-size: 1.1rem;font-weight: 900;}
+
+/* 項目清單符號，連帶影響清單內的文字色彩 */
+/* li{ color: #198754;} */
+
+/* 單獨針對／編鎮清單的符號色彩，優化前 
+ul li::marker{
+    color: #198754;
+}
+
+ol li::marker{
+    color: #198754;
+} */
+
+/* 單獨針對／編鎮清單的符號色彩，優化後方式一 
+li::marker, ol li::marker{
+    color: #198754;
+} */
+
+/* 單獨針對／編鎮清單的符號色彩，優化後方式二 */
+li::marker{color: #198754;}
+
+
+/* ChatGPT：旅遊安全頁面的旅遊警示的四個等級文字色彩 */
+.text-muted {
+    color: #666666;    /* 灰色，表示次要、輕微的資訊 */
+}
+
+.text-warning {
+    color: #FFdd00;   /* 黃色，表示提醒、警示 */
+}
+
+.text-alert {
+    color: #FF8800;   /* 橙色，表示注意或強調 */
+}
+
+.text-danger {
+    color: #CC0000;   /* 紅色，表示錯誤、危險 */
+}
+
+/* 保留（collection頁）card類別，新增樣式拿掉邊框 */
+.card-no-border {
+    border: none;
+    background: none;
+}
+
+/* 字體樣式粗細，100-900 */
+/* 類別=： 個別套用 */
+.text-boldest {
+    font-weight: 900;
+}
+
+/* 複合：整體套用 */
+#none h5 {
+    font-weight: 900;
+}
+
+/* Collection頁面第一張大圖，圖片裁切 
+.imgCut{
+    width: 100%;    */ /* 原圖尺寸、父層寬度 
+    height: 500px;
+    clip:rect(0px,0px,290px,0px);
+    object-fit: cover;
+} */
